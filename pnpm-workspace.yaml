@@ -9,7 +9,7 @@ catalog:
   # ESLint 10 para API y paquetes. Web y móvil usan "catalog:eslint9" porque los plugins
   # de eslint-config-next / eslint-config-expo aún no soportan la v10.
   # Ver docs/architecture/decisions/0002-versiones-y-herramientas.md
-  eslint: ^10.0.0
+  eslint: ^10.15.0
   typescript: ~6.0.3
   typescript-eslint: ^8.74.0
   vitest: ^5.1.0

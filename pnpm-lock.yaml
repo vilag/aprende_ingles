@@ -187,7 +187,7 @@ catalogs:
       specifier: ^22.19.0
       version: 22.20.5
     eslint:
-      specifier: ^10.0.0
+      specifier: ^10.15.0
       version: 10.15.0
     typescript:
       specifier: ~6.0.3
