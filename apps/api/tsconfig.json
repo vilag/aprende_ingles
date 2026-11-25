@@ -1,0 +1,8 @@
+{
+  "extends": "@aei/config/tsconfig/nestjs.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "."
+  },
+  "include": ["src", "test", "prisma.config.ts", "vitest.config.ts", "vitest.config.integration.ts"]
+}

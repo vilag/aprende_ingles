@@ -1,0 +1,5 @@
+{
+  "extends": "@aei/config/tsconfig/library.json",
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
+}

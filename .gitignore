@@ -1,0 +1,61 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+
+# Builds
+dist/
+build/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Turborepo
+.turbo/
+
+# Expo / React Native
+.expo/
+web-build/
+expo-env.d.ts
+/apps/mobile/ios/
+/apps/mobile/android/
+.metro-health-check*
+
+# Prisma (cliente generado)
+/apps/api/src/generated/
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Variables de entorno: nunca se versionan. Solo los ejemplos.
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Llaves y certificados
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.mobileprovision
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Configuración local de Claude Code
+.claude/settings.local.json

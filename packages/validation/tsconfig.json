@@ -1,0 +1,8 @@
+{
+  "extends": "@aei/config/tsconfig/library.json",
+  "compilerOptions": {
+    "rootDir": "${configDir}",
+    "noEmit": true
+  },
+  "include": ["src", "vitest.config.ts"]
+}

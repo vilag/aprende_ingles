@@ -1,0 +1,17 @@
+node_modules
+pnpm-lock.yaml
+dist
+build
+.next
+out
+coverage
+.turbo
+.expo
+web-build
+apps/api/src/generated
+apps/api/prisma/migrations
+test-results
+playwright-report
+**/next-env.d.ts
+**/expo-env.d.ts
+**/AGENTS.md

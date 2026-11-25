@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+/*
+ * Tokens de diseño de AI English Immersion.
+ * Los colores se definen como variables para soportar tema claro y oscuro;
+ * los componentes solo usan los nombres semánticos (bg-surface, text-ink, …).
+ */
+:root {
+  --background: #fbfaf7;
+  --surface: #ffffff;
+  --surface-muted: #f3f1ec;
+  --ink: #16162a;
+  --ink-muted: #5b5b72;
+  --border: #e6e2da;
+  --brand: #3b3bd6;
+  --brand-strong: #2a2aa8;
+  --brand-soft: #ececfd;
+  --on-brand: #ffffff;
+  --accent: #f0643f;
+  --accent-soft: #fdebe4;
+  --success: #12805c;
+  --success-soft: #e3f5ee;
+  --warning: #a15c00;
+  --warning-soft: #fdf1dc;
+  --danger: #b42318;
+  --danger-soft: #fdeceb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0e1a;
+    --surface: #161627;
+    --surface-muted: #1d1d33;
+    --ink: #f1f0f7;
+    --ink-muted: #a9a8c0;
+    --border: #2b2b45;
+    --brand: #8c8cff;
+    --brand-strong: #b0b0ff;
+    --brand-soft: #23234a;
+    --on-brand: #0e0e1a;
+    --accent: #ff8a66;
+    --accent-soft: #3a2119;
+    --success: #4fd1a1;
+    --success-soft: #12322a;
+    --warning: #f5b453;
+    --warning-soft: #3a2a12;
+    --danger: #ff8a80;
+    --danger-soft: #3d1715;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-on-brand: var(--on-brand);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}

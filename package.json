@@ -1,0 +1,36 @@
+{
+  "name": "ai-english-immersion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI English Immersion — plataforma SaaS de aprendizaje de inglés con IA (monorepo).",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@12.23.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --filter=@aei/api --filter=@aei/web",
+    "dev:api": "turbo run dev --filter=@aei/api",
+    "dev:web": "turbo run dev --filter=@aei/web",
+    "dev:mobile": "turbo run build --filter=@aei/mobile^... && pnpm --filter @aei/mobile start",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:integration": "turbo run test:integration",
+    "test:e2e": "turbo run test:e2e",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "infra:logs": "docker compose logs -f",
+    "db:generate": "pnpm --filter @aei/api db:generate",
+    "db:migrate": "pnpm --filter @aei/api db:migrate",
+    "db:status": "pnpm --filter @aei/api db:status",
+    "db:studio": "pnpm --filter @aei/api db:studio"
+  },
+  "devDependencies": {
+    "prettier": "3.10.1",
+    "turbo": "2.11.13"
+  }
+}

@@ -1,0 +1,21 @@
+// Esquema de base de datos de AI English Immersion.
+//
+// Convenciones (ver docs/architecture/database.md):
+// - Identificadores UUID: `id String @id @default(uuid(7)) @db.Uuid`.
+// - Fechas en UTC: `@db.Timestamptz(3)`.
+// - Nombres de tablas y columnas en snake_case con @@map / @map.
+// - Cada cambio se versiona con `pnpm db:migrate` (prisma migrate dev).
+//
+// FASE 1: solo infraestructura. Los modelos de dominio (User, Course, Lesson, …)
+// se agregan módulo por módulo a partir de la FASE 2, cada uno con su migración.
+
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  moduleFormat        = "esm"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}

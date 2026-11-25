@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Dependencias npm del monorepo. Expo gestiona las de apps/mobile con `expo install`,
+  # por eso se ignoran sus paquetes nativos aquí (actualizar con cada SDK de Expo).
+  # React también se ignora: web y móvil deben usar la MISMA versión, la que fija el SDK de Expo.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      dev-tooling:
+        dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: 'expo*'
+      - dependency-name: 'react-native*'
+      - dependency-name: '@expo/*'
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
+      - dependency-name: '@types/react'
+      - dependency-name: '@types/react-dom'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

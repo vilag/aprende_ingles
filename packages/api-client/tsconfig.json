@@ -1,0 +1,9 @@
+{
+  "extends": "@aei/config/tsconfig/library.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "rootDir": "${configDir}",
+    "noEmit": true
+  },
+  "include": ["src", "vitest.config.ts"]
+}
