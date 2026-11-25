@@ -5,7 +5,7 @@ packages:
 # Versiones compartidas por varios paquetes del monorepo (se referencian con "catalog:").
 # La app móvil NO usa el catálogo por defecto: Expo gestiona sus versiones con `expo install`.
 catalog:
-  '@types/node': ^22.19.0
+  '@types/node': ^26.6.6
   # ESLint 10 para API y paquetes. Web y móvil usan "catalog:eslint9" porque los plugins
   # de eslint-config-next / eslint-config-expo aún no soportan la v10.
   # Ver docs/architecture/decisions/0002-versiones-y-herramientas.md
